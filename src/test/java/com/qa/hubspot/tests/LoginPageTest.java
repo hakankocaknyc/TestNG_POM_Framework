@@ -38,11 +38,14 @@ public class LoginPageTest {
 	Credentials userCred;
  
 	Logger log = Logger.getLogger(LoginPageTest.class);
+	
 	@BeforeMethod(alwaysRun= true)
+	
 	@Parameters(value = {"browser"})
+	
 	public void setUp(String browser) {
 		
-		String browserName= null;
+		String browserName = null;
 		
 		basePage = new BasePage();
 		prop = basePage.init_properties();
@@ -72,7 +75,7 @@ public class LoginPageTest {
 		String title = loginPage.getPageTitle();
 		System.out.println("login page title "+ title);
 		Assert.assertEquals(title, Constants.LOGIN_PAGE_TITLE);
-		log.info("starting -------------->>>>>>>>>.verifyLoginPageTest");
+		log.info("ending -------------->>>>>>>>>.verifyLoginPageTest");
 		log.warn("some warning");
 		log.error("some error");
 		log.fatal("fatal error");
